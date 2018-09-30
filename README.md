@@ -24,8 +24,8 @@ var obsSync = require('huaweicloud-obs-sync');
 obsSync.syncFolderToOBS({
         server : "https://obs.cn-north-1.myhwclouds.com",
         bucket: "obs-2f97",
-        accessKeyId: "R7DYQD3DQRRLTDWYtE3S",
-        secretAccessKey: "TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOFkgjCB2",
+        accessKeyId: "R7DYQD3DQRRLTDWYttE3S",
+        secretAccessKey: "TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOhdgFkgjCB2",
         localDir: "D:\\public",
         localFilesIgnorePattern: "^\\..*",
         remoteDir: "/",
@@ -37,8 +37,8 @@ obsSync.syncFolderToOBS({
 obsSync.syncFileToOBS("D:\\public\\images\\avast.png", {
         server : "https://obs.cn-north-1.myhwclouds.com",
         bucket: "obs-2f97",
-        accessKeyId: "R7DYQD3DQRRLTDWYtE3S",
-        secretAccessKey: "TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOFkgjCB2"
+        accessKeyId: "R7DYQD3DQRRLTDWYttE3S",
+        secretAccessKey: "TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOhdgFkgjCB2"
         localFileName: "D:\\public\\images\\avast.png",
         remoteFileName: "images/avast.png"
     })
@@ -50,15 +50,15 @@ obsSync.syncFileToOBS("D:\\public\\images\\avast.png", {
 
 | 名称 | 必选 | 默认值 | 描述 |
 | -- | -- | -- |-- |
-| server | 必填 | null | OBS服务器地址，以`https://`开头，不包含桶名称，比如`https://obs.cn-north-1.myhwclouds.com` |
+| server | 必填 | null | OBS服务器地址，以`https://`开头，不包含桶名称，\r\n比如`https://obs.cn-north-1.myhwclouds.com` |
 | bucket |必填 | null | OBS桶名称 |
 | accessKeyId | 必填 | null | 访问OBS的accessKeyId |
 | secretAccessKey | 必填 | null | 访问OBS的secretAccessKey |
 | localDir | 必填 | null | 本地同步目录的绝对路径 |
-| localFilesIgnorePattern | 可选 | "^\\..*" | 本地忽略文件的正则表达式，该正则表达式会应用到文件相对于`localDir`的相对路径，路径分隔符为`/` |
+| localFilesIgnorePattern | 可选 | "^\\..*" | 本地忽略文件的正则表达式，\r\n该正则表达式会应用到文件相对于`localDir`的相对路径，路径分隔符为`/` |
 | remoteDir | 可选 | / | 同步到远端的目录，路径分隔符为`/` |
-| syncDeletedFiles | 可选 | yes | `yes`或者`no`, 如果是`yes`，则本地文件删除后，OBS中的文件也会对应删除，但是`syncDeletedFilesIgnorePattern`匹配上的文件除外 |
-| syncDeletedFilesIgnorePattern | 可选 | "^\\..*" | 远端忽略文件的正则表达式，该正则表达式会应用到文件相对于`remoteDir`的相对路径，路径分隔符为`/` |
+| syncDeletedFiles | 可选 | yes | `yes`或者`no`, \r\n如果是`yes`，则本地文件删除后，OBS中的文件也会对应删除，\r\n但是`syncDeletedFilesIgnorePattern`匹配上的文件除外 |
+| syncDeletedFilesIgnorePattern | 可选 | "^\\..*" | 远端忽略文件的正则表达式，\r\n该正则表达式会应用到文件相对于`remoteDir`的相对路径，路径分隔符为`/` |
 
 ### syncFileToOBS(options)
 
@@ -66,7 +66,7 @@ obsSync.syncFileToOBS("D:\\public\\images\\avast.png", {
 
 | 名称 | 必选 | 默认值 | 描述 |
 | -- | -- | -- |-- |
-| server | 必填 | null | OBS服务器地址，以`https://`开头，不包含桶名称，比如`https://obs.cn-north-1.myhwclouds.com` |
+| server | 必填 | null | OBS服务器地址，以`https://`开头，不包含桶名称，\r\n比如`https://obs.cn-north-1.myhwclouds.com` |
 | bucket |必填 | null | OBS桶名称 |
 | accessKeyId | 必填 | null | 访问OBS的accessKeyId |
 | secretAccessKey | 必填 | null | 访问OBS的secretAccessKey |
@@ -83,7 +83,7 @@ obsSync.syncFileToOBS("D:\\public\\images\\avast.png", {
 
 使用VSCode编辑博客，粘贴图片自动将文件上传至OBS并自动在博客中插入图片地址，参考:
 
-## 3. 定期备份
+### 3. 定期备份
 
 定期备份本地目录到OBS
 
